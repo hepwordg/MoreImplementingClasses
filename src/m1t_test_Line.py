@@ -179,6 +179,7 @@ def run_test_init():
 
     end_test()
 
+
 def run_test_clone():
     """ Tests the   clone   method of the Line class. """
     if not start_test('clone'):
