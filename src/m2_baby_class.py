@@ -3,7 +3,7 @@ A   Baby   class and methods that use the Baby class.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
          their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -89,6 +89,29 @@ def main():
 #          """ Brief description of what objects of the class 'are'. """
 #
 ########################################################################
+
+class Baby(object):
+    """ Represents a baby in non-dimensional space. """
+
+    def __init__(self, name):
+        self.name = name
+        print('Hello, baby', name)
+        self.bfts = 0 # BFTS = Baby Feed Time Since: The amount of hours since the baby has been fed.
+
+    def feed_baby(self):
+        self.bfts = 0
+        print('Thank you for feeding', self.name)
+
+    def hour_passes(self):
+        self.bfts = self.bfts + 1
+        if self.bfts == 1:
+            print('Baby', self.name, 'is sleeping.')
+        if self.bfts == 2:
+            print('Baby', self.name, 'is awake. Time for food.')
+        if self.bfts >= 3:
+            print('Baby', self.name, 'is CRYING uncontrollably! Feed the Baby!')
+
+
 
 
 
